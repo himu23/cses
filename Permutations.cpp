@@ -1,6 +1,6 @@
 //
 #include "bits/stdc++.h"
-//#define int long long
+#define int long long
 #define uint unsigned long long
 #define vi vector<int>
 #define pb push_back
@@ -10,22 +10,26 @@
 #define mne(v)  *min_element(v.begin(),v.end())
 using namespace std;
 int32_t main() {
-    string s;
-    cin>>s;
-    char c=s[0];
-    int count=1;
-    int ans=0;
-    for(int i=1;i<s.length();i++){
-        if(c==s[i]){
-            count++;
-        }
-        else{
-            c=s[i];
-            ans=max(ans,count);
-            count=1;
+    int n;
+    cin>>n;
+    if(n==1){
+        cout<<1;
+        return 0;
+    }
+    if(n<=3){
+        cout<<"NO SOLUTION";
+        return 0;
+    }
+    for(int i=1;i<=n;i++){
+        if(i%2==0){
+            cout<<i<<" ";
         }
     }
-    ans = max(ans, count);
-    cout<<ans<<endl;
+    for(int i=1;i<=n;i++){
+        if(i%2!=0){
+            cout<<i<<" ";
+        }
+    }
+    cout<<endl;
     return 0;
 }
