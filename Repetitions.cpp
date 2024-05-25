@@ -10,8 +10,12 @@
 #define mne(v)  *min_element(v.begin(),v.end())
 using namespace std;
 int32_t main() {
-    int n;
-    cin>>n;
-    
+    string;
+    cin>>s;
+    char c=s[0];
+    int ans=0;
+    for(int i=0;i<s.lenght();i++){
+        if
+    }
     return 0;
 }
